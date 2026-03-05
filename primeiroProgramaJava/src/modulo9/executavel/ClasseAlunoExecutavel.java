@@ -12,7 +12,8 @@ public class ClasseAlunoExecutavel {
 		Agora temos um objetoo real na memoria
 		Aluno aluno2 = new Aluno();
 		*/
-		
+		/*new Aluno() é uma instancia (Criação de Obejto)*/
+		/*aluno1 é uma referência para o objeto aluno*/
 		Aluno aluno1 = new Aluno();//Aluno Bernardo
 		
 		Aluno aluno2 = new Aluno();//Aluno Pierre
