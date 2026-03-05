@@ -15,6 +15,12 @@ public class ClasseAlunoExecutavel {
 		/*new Aluno() é uma instancia (Criação de Obejto)*/
 		/*aluno1 é uma referência para o objeto aluno*/
 		Aluno aluno1 = new Aluno();//Aluno Bernardo
+		aluno1.nome = "Bernardo";
+		aluno1.idade = 8;
+		
+		System.out.println("Nome do 1º Aluno: " + aluno1.nome);
+		System.out.println("Idade do " + aluno1.nome + ": " + aluno1.idade + " anos");
+		
 		
 		Aluno aluno2 = new Aluno();//Aluno Pierre
 		
