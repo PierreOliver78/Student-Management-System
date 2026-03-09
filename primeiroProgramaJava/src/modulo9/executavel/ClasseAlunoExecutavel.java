@@ -36,7 +36,10 @@ public class ClasseAlunoExecutavel {
 		System.out.println("Nome do aluno: " + aluno1.getNome());
 		System.out.println("Idade do aluno: " + aluno1.getIdade());
 		System.out.println("Data de Nascimento: " + aluno1.getDataNascimento());
-		System.out.println("Média da nota é: " + aluno1.getMediaNota());
+		System.out.println("Média da nota: " + aluno1.getMediaNota());
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado" : "Reprovado"));
+		System.out.println("Resultado: " + aluno1.getAlunoAprovado2());
+		
 		
 		
 		System.out.println();
@@ -72,7 +75,8 @@ public class ClasseAlunoExecutavel {
 		System.out.println("Idade do aluno: " + aluno2.getIdade());
 		System.out.println("Data de Nascimento: " + aluno2.getDataNascimento());
 		System.out.println("Média da nota: " + aluno2.getMediaNota());
-		
+		System.out.println("Resultado: " + (aluno2.getAlunoAprovado1() ? "Aprovado" : "Reprovado"));
+		System.out.println("Resultado: " + aluno2.getAlunoAprovado2());
 		
 				
 		/*=======================================================================*/
