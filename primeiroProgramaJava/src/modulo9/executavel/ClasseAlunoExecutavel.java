@@ -16,6 +16,7 @@ public class ClasseAlunoExecutavel {
 		*/
 		/*new Aluno() é uma instancia (Criação de Obejto)*/
 		/*aluno1 é uma referência para o objeto aluno*/
+		//Aluno aluno1 = null; Quando esquece de instanciar um dos motivos, mais podem ser vários. Aprendemos identificar.
 		Aluno aluno1 = new Aluno();//Aluno Bernardo
 		
 		aluno1.setNome("Bernardo");
