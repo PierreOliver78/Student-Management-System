@@ -17,22 +17,39 @@ public class ClasseAlunoExecutavel {
 		/*new Aluno() é uma instancia (Criação de Obejto)*/
 		/*aluno1 é uma referência para o objeto aluno*/
 		//Aluno aluno1 = null; Quando esquece de instanciar um dos motivos, mais podem ser vários. Aprendemos identificar.
+		
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		String idade = JOptionPane.showInputDialog("Qual a idade? Do aluno " + nome + ".");
+		String dataNascimento = JOptionPane.showInputDialog("Data nascimento?");
+		String rg= JOptionPane.showInputDialog("Numero RG");
+		String cpf= JOptionPane.showInputDialog("Qual é o CPF?");
+		String nomeMae= JOptionPane.showInputDialog("Qual o nome da mãr?");
+		String nomePai= JOptionPane.showInputDialog("Qual o nome do pai?");
+		String matricula= JOptionPane.showInputDialog("Data da matrícula?");
+		String escola= JOptionPane.showInputDialog("Nome da escola?");
+		String serie= JOptionPane.showInputDialog("Qual a série?");
+		String n1= JOptionPane.showInputDialog("1ª Nota?");
+		String n2= JOptionPane.showInputDialog("2ª Nota?");
+		String n3= JOptionPane.showInputDialog("3ª Nota?");
+		String n4= JOptionPane.showInputDialog("4ª Nota?");
+		
+		
 		Aluno aluno1 = new Aluno();//Aluno Bernardo
 		
-		aluno1.setNome("Bernardo");
-		aluno1.setIdade(8);
-		aluno1.setDataNascimento("15/01/2018");
-		aluno1.setRegistroGeral("678.568-4");
-		aluno1.setNumeroCpf("35.789.857-8");
-		aluno1.setNomeMae("Luana");
-		aluno1.setNomePai("Pierre");
-		aluno1.setDataMatricula("24/11/2025");
-		aluno1.setNomeEscola("Sesc");
-		aluno1.setSerieMatricula("3ª B");
-		aluno1.setNota01(90);
-		aluno1.setNota02(80.8);
-		aluno1.setNota03(70.9);
-		aluno1.setNota04(87.6);
+		aluno1.setNome(nome);
+		aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setDataNascimento(dataNascimento);
+		aluno1.setRegistroGeral(rg);
+		aluno1.setNumeroCpf(cpf);
+		aluno1.setNomeMae(nomeMae);
+		aluno1.setNomePai(nomePai);
+		aluno1.setDataMatricula(matricula);
+		aluno1.setNomeEscola(escola);
+		aluno1.setSerieMatricula(serie);
+		aluno1.setNota01(Double.parseDouble(n1));
+		aluno1.setNota02(Double.parseDouble(n2));
+		aluno1.setNota03(Double.parseDouble(n3));
+		aluno1.setNota04(Double.parseDouble(n4));
 		
 		System.out.println("Nome do aluno: " + aluno1.getNome());
 		System.out.println("Idade do aluno: " + aluno1.getIdade());
