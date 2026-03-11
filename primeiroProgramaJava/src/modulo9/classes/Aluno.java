@@ -1,5 +1,7 @@
 package modulo9.classes;
 
+import java.util.Objects;
+
 public class Aluno {
 	
 	/*Esses são os atributos do Aluno*/
@@ -180,4 +182,40 @@ public class Aluno {
 				+ serieMatricula + ", nota01=" + nota01 + ", nota02=" + nota02 + ", nota03=" + nota03 + ", nota04="
 				+ nota04 + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + ((numeroCpf == null) ? 0 : numeroCpf.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		if (numeroCpf == null) {
+			if (other.numeroCpf != null)
+				return false;
+		} else if (!numeroCpf.equals(other.numeroCpf))
+			return false;
+		return true;
+	}
+
+
+
+	
+	
 }

@@ -18,7 +18,7 @@ public class ClasseAlunoExecutavel {
 		/*aluno1 é uma referência para o objeto aluno*/
 		//Aluno aluno1 = null; Quando esquece de instanciar um dos motivos, mais podem ser vários. Aprendemos identificar.
 		
-		
+		/*
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
 		String dataNascimento = JOptionPane.showInputDialog("Data nascimento?");
@@ -33,10 +33,10 @@ public class ClasseAlunoExecutavel {
 		String n2= JOptionPane.showInputDialog("2ª Nota?");
 		String n3= JOptionPane.showInputDialog("3ª Nota?");
 		String n4= JOptionPane.showInputDialog("4ª Nota?");
+		*/
 		
-		
-		Aluno aluno1 = new Aluno();//Aluno Bernardo
-		
+		//Aluno aluno1 = new Aluno();//Aluno Bernardo
+		/*
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
@@ -51,7 +51,7 @@ public class ClasseAlunoExecutavel {
 		aluno1.setNota02(Double.parseDouble(n2));
 		aluno1.setNota03(Double.parseDouble(n3));
 		aluno1.setNota04(Double.parseDouble(n4));
-		
+		*/
 		/*
 		System.out.println("Nome do aluno: " + aluno1.getNome());		
 		System.out.println("Idade do aluno: " + aluno1.getIdade());
@@ -63,10 +63,27 @@ public class ClasseAlunoExecutavel {
 		System.out.println("Resultado: " + aluno1.getAlunoAprovado2());
 		*/
 		
-			
+		/*	
 		System.out.println(aluno1.toString());//Descrição do objeto na memoria
 		System.out.println("Média da nota: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado" : "Reprovado"));
+		*/
+		
+		//Equals e hashcode(Diferenciar e comparar objetos)
+		Aluno aluno1 = new Aluno();
+		aluno1.setNome("Pierre");
+		aluno1.setNumeroCpf("253");
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Pierre");
+		aluno2.setNumeroCpf("123");
+		
+		if (aluno1.equals(aluno2)) {
+			System.out.println("Alunos são iguais");
+		}else {
+			System.out.println("Alunos não são iguais.");
+		}
+		
 		
 		/*
 		aluno = new Aluno();
@@ -87,7 +104,7 @@ public class ClasseAlunoExecutavel {
 		System.out.println("Nome do 1º Aluno: " + aluno1.nome);
 		System.out.println("Idade do " + aluno1.nome + ": " + aluno1.idade + " anos");
 		*/
-		
+		/*
 		Aluno aluno2 = new Aluno();//Aluno Pierre
 		
 		aluno2.setNome("Pierre");
@@ -111,7 +128,7 @@ public class ClasseAlunoExecutavel {
 		System.out.println("Média da nota: " + aluno2.getMediaNota());
 		System.out.println("Resultado: " + (aluno2.getAlunoAprovado1() ? "Aprovado" : "Reprovado"));
 		System.out.println("Resultado: " + aluno2.getAlunoAprovado2());
-		
+		*/
 				
 		/*=======================================================================*/
 		
@@ -120,6 +137,7 @@ public class ClasseAlunoExecutavel {
 		Aluno aluno4 = new Aluno("Jonas");
 		
 		Aluno aluno5 = new Aluno("Pedro", 45);
+		
 	}
 
 }
