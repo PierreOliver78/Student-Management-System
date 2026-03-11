@@ -18,12 +18,13 @@ public class ClasseAlunoExecutavel {
 		/*aluno1 é uma referência para o objeto aluno*/
 		//Aluno aluno1 = null; Quando esquece de instanciar um dos motivos, mais podem ser vários. Aprendemos identificar.
 		
+		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
-		String idade = JOptionPane.showInputDialog("Qual a idade? Do aluno " + nome + ".");
+		String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
 		String dataNascimento = JOptionPane.showInputDialog("Data nascimento?");
 		String rg= JOptionPane.showInputDialog("Numero RG");
 		String cpf= JOptionPane.showInputDialog("Qual é o CPF?");
-		String nomeMae= JOptionPane.showInputDialog("Qual o nome da mãr?");
+		String nomeMae= JOptionPane.showInputDialog("Qual o nome da mãe?");
 		String nomePai= JOptionPane.showInputDialog("Qual o nome do pai?");
 		String matricula= JOptionPane.showInputDialog("Data da matrícula?");
 		String escola= JOptionPane.showInputDialog("Nome da escola?");
@@ -51,14 +52,29 @@ public class ClasseAlunoExecutavel {
 		aluno1.setNota03(Double.parseDouble(n3));
 		aluno1.setNota04(Double.parseDouble(n4));
 		
-		System.out.println("Nome do aluno: " + aluno1.getNome());
+		/*
+		System.out.println("Nome do aluno: " + aluno1.getNome());		
 		System.out.println("Idade do aluno: " + aluno1.getIdade());
 		System.out.println("Data de Nascimento: " + aluno1.getDataNascimento());
+		System.out.println("Numero do RG " + aluno1.getRegistroGeral());
+		System.out.println("Numero CPF: " + aluno1.getNumeroCpf());
 		System.out.println("Média da nota: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado" : "Reprovado"));
 		System.out.println("Resultado: " + aluno1.getAlunoAprovado2());
+		*/
 		
+			
+		System.out.println(aluno1.toString());//Descrição do objeto na memoria
+		System.out.println("Média da nota: " + aluno1.getMediaNota());
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado" : "Reprovado"));
 		
+		/*
+		aluno = new Aluno();
+		System.out.println(aluno);
+		
+		aluno = new Aluno();
+		System.out.println(aluno.toString());
+		*/
 		
 		System.out.println();
 		System.out.println("=================================================");

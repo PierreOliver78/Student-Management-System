@@ -171,4 +171,13 @@ public class Aluno {
 			return "Aluno está reprovado";
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatricula="
+				+ serieMatricula + ", nota01=" + nota01 + ", nota02=" + nota02 + ", nota03=" + nota03 + ", nota04="
+				+ nota04 + "]";
+	}
 }
