@@ -18,7 +18,7 @@ public class ClasseAlunoExecutavel {
 		/*aluno1 é uma referência para o objeto aluno*/
 		//Aluno aluno1 = null; Quando esquece de instanciar um dos motivos, mais podem ser vários. Aprendemos identificar.
 		
-		/*
+		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
 		String dataNascimento = JOptionPane.showInputDialog("Data nascimento?");
@@ -29,14 +29,21 @@ public class ClasseAlunoExecutavel {
 		String matricula= JOptionPane.showInputDialog("Data da matrícula?");
 		String escola= JOptionPane.showInputDialog("Nome da escola?");
 		String serie= JOptionPane.showInputDialog("Qual a série?");
-		String n1= JOptionPane.showInputDialog("1ª Nota?");
-		String n2= JOptionPane.showInputDialog("2ª Nota?");
-		String n3= JOptionPane.showInputDialog("3ª Nota?");
-		String n4= JOptionPane.showInputDialog("4ª Nota?");
-		*/
 		
-		//Aluno aluno1 = new Aluno();//Aluno Bernardo
-		/*
+		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1");		
+		String n1= JOptionPane.showInputDialog("1ª Nota?");
+		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2");
+		String n2= JOptionPane.showInputDialog("2ª Nota?");
+		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3");
+		String n3= JOptionPane.showInputDialog("3ª Nota?");
+		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4");
+		String n4= JOptionPane.showInputDialog("4ª Nota?");
+		
+				
+		
+		
+		Aluno aluno1 = new Aluno();//Aluno Bernardo
+		
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
@@ -47,11 +54,17 @@ public class ClasseAlunoExecutavel {
 		aluno1.setDataMatricula(matricula);
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatricula(serie);
+		
+		aluno1.setDisciplina1(disciplina1);
+		aluno1.setDisciplina2(disciplina2);
+		aluno1.setDisciplina3(disciplina3);
+		aluno1.setDisciplina4(disciplina4);
+		
 		aluno1.setNota01(Double.parseDouble(n1));
 		aluno1.setNota02(Double.parseDouble(n2));
 		aluno1.setNota03(Double.parseDouble(n3));
 		aluno1.setNota04(Double.parseDouble(n4));
-		*/
+		
 		/*
 		System.out.println("Nome do aluno: " + aluno1.getNome());		
 		System.out.println("Idade do aluno: " + aluno1.getIdade());
@@ -63,13 +76,14 @@ public class ClasseAlunoExecutavel {
 		System.out.println("Resultado: " + aluno1.getAlunoAprovado2());
 		*/
 		
-		/*	
+			
 		System.out.println(aluno1.toString());//Descrição do objeto na memoria
 		System.out.println("Média da nota: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado" : "Reprovado"));
-		*/
+		
 		
 		//Equals e hashcode(Diferenciar e comparar objetos)
+		/*
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome("Pierre");
 		aluno1.setNumeroCpf("253");
@@ -83,7 +97,7 @@ public class ClasseAlunoExecutavel {
 		}else {
 			System.out.println("Alunos não são iguais.");
 		}
-		
+		*/
 		
 		/*
 		aluno = new Aluno();

@@ -15,11 +15,51 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatricula;
+	
+	private String disciplina1;
 	private double nota01;
+	private String disciplina2;
 	private double nota02;
+	private String disciplina3;
 	private double nota03;
+	private String disciplina4;
 	private double nota04;
 	
+	
+	
+	
+	public String getDisciplina1() {
+		return disciplina1;
+	}
+
+	public void setDisciplina1(String disciplina1) {
+		this.disciplina1 = disciplina1;
+	}
+
+	public String getDisciplina2() {
+		return disciplina2;
+	}
+
+	public void setDisciplina2(String disciplina2) {
+		this.disciplina2 = disciplina2;
+	}
+
+	public String getDisciplina3() {
+		return disciplina3;
+	}
+
+	public void setDisciplina3(String disciplina3) {
+		this.disciplina3 = disciplina3;
+	}
+
+	public String getDisciplina4() {
+		return disciplina4;
+	}
+
+	public void setDisciplina4(String disciplina4) {
+		this.disciplina4 = disciplina4;
+	}
+
 	public double getNota01() {
 		return nota01;
 	}
@@ -174,13 +214,18 @@ public class Aluno {
 		}
 	}
 
+	
+
+
+
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatricula="
-				+ serieMatricula + ", nota01=" + nota01 + ", nota02=" + nota02 + ", nota03=" + nota03 + ", nota04="
-				+ nota04 + "]";
+				+ serieMatricula + ", disciplina1=" + disciplina1 + ", nota01=" + nota01 + ", disciplina2="
+				+ disciplina2 + ", nota02=" + nota02 + ", disciplina3=" + disciplina3 + ", nota03=" + nota03
+				+ ", disciplina4=" + disciplina4 + ", nota04=" + nota04 + "]";
 	}
 
 	@Override
@@ -192,6 +237,7 @@ public class Aluno {
 		return result;
 	}
 
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -213,7 +259,7 @@ public class Aluno {
 			return false;
 		return true;
 	}
-
+	 
 
 
 	
