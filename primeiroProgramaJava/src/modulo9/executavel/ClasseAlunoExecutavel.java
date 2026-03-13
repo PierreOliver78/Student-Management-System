@@ -78,7 +78,7 @@ public class ClasseAlunoExecutavel {
 		
 			
 		System.out.println(aluno1.toString());//Descrição do objeto na memoria
-		System.out.println("Média da nota: " + aluno1.getMediaNota());
+		System.out.println("Média da nota final: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado " : "Reprovado ") + "Aluno " + aluno1.getNome());
 		
 		
