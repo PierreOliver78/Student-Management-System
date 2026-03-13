@@ -31,13 +31,13 @@ public class ClasseAlunoExecutavel {
 		String serie= JOptionPane.showInputDialog("Qual a série?");
 		
 		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1");		
-		String n1= JOptionPane.showInputDialog("1ª Nota?");
+		String nota01= JOptionPane.showInputDialog("1ª Nota?");
 		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2");
-		String n2= JOptionPane.showInputDialog("2ª Nota?");
+		String nota02= JOptionPane.showInputDialog("2ª Nota?");
 		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3");
-		String n3= JOptionPane.showInputDialog("3ª Nota?");
+		String nota03= JOptionPane.showInputDialog("3ª Nota?");
 		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4");
-		String n4= JOptionPane.showInputDialog("4ª Nota?");
+		String nota04= JOptionPane.showInputDialog("4ª Nota?");
 		
 				
 		
@@ -55,15 +55,15 @@ public class ClasseAlunoExecutavel {
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatricula(serie);
 		
-		aluno1.setDisciplina1(disciplina1);
-		aluno1.setDisciplina2(disciplina2);
-		aluno1.setDisciplina3(disciplina3);
-		aluno1.setDisciplina4(disciplina4);
+		aluno1.getDisciplina().setDisciplina1(disciplina1);
+		aluno1.getDisciplina().setDisciplina2(disciplina2);
+		aluno1.getDisciplina().setDisciplina3(disciplina3);
+		aluno1.getDisciplina().setDisciplina4(disciplina4);
 		
-		aluno1.setNota01(Double.parseDouble(n1));
-		aluno1.setNota02(Double.parseDouble(n2));
-		aluno1.setNota03(Double.parseDouble(n3));
-		aluno1.setNota04(Double.parseDouble(n4));
+		aluno1.getDisciplina().setNota01(Double.parseDouble(nota01));
+		aluno1.getDisciplina().setNota02(Double.parseDouble(nota02));
+		aluno1.getDisciplina().setNota03(Double.parseDouble(nota03));
+		aluno1.getDisciplina().setNota04(Double.parseDouble(nota04));
 		
 		/*
 		System.out.println("Nome do aluno: " + aluno1.getNome());		
@@ -79,7 +79,7 @@ public class ClasseAlunoExecutavel {
 			
 		System.out.println(aluno1.toString());//Descrição do objeto na memoria
 		System.out.println("Média da nota: " + aluno1.getMediaNota());
-		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado" : "Reprovado"));
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado " : "Reprovado ") + "Aluno " + aluno1.getNome());
 		
 		
 		//Equals e hashcode(Diferenciar e comparar objetos)
