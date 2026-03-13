@@ -1,6 +1,6 @@
 # Sistema de Gestão de Alunos
 
-Projeto desenvolvido em Java para praticar Programação Orientada a Objetos.
+Projeto em desenvolvimento Java para estudo de Programação Orientada a Objetos.
 
 ## Funcionalidades
 
