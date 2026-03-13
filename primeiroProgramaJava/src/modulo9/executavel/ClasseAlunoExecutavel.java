@@ -55,16 +55,7 @@ public class ClasseAlunoExecutavel {
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatricula(serie);
 		
-		aluno1.getDisciplina().setDisciplina1(disciplina1);
-		aluno1.getDisciplina().setDisciplina2(disciplina2);
-		aluno1.getDisciplina().setDisciplina3(disciplina3);
-		aluno1.getDisciplina().setDisciplina4(disciplina4);
-		
-		aluno1.getDisciplina().setNota01(Double.parseDouble(nota01));
-		aluno1.getDisciplina().setNota02(Double.parseDouble(nota02));
-		aluno1.getDisciplina().setNota03(Double.parseDouble(nota03));
-		aluno1.getDisciplina().setNota04(Double.parseDouble(nota04));
-		
+			
 		/*
 		System.out.println("Nome do aluno: " + aluno1.getNome());		
 		System.out.println("Idade do aluno: " + aluno1.getIdade());

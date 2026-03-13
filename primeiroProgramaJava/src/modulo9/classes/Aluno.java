@@ -1,5 +1,8 @@
 package modulo9.classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aluno {
 	
 	/*Esses são os atributos do Aluno*/
@@ -14,16 +17,16 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatricula;
 	
-	private Disciplina disciplina = new Disciplina();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 	
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
-
+	
 	
 	public Aluno() {
 		
@@ -124,8 +127,7 @@ public class Aluno {
 	
 	/*Metodo que retorna a media do aluno*/
 	public double getMediaNota() {
-		return (disciplina.getNota01() + disciplina.getNota02() + disciplina.getNota03()
-		+ disciplina.getNota04()) / 4;
+		return 0;
 	}
 	
 	
@@ -155,7 +157,7 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatricula="
-				+ serieMatricula + ", disciplina=" + disciplina + "]";
+				+ serieMatricula + "]";
 	}
 
 	@Override
