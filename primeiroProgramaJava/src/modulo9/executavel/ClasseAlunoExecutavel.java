@@ -20,7 +20,7 @@ public class ClasseAlunoExecutavel {
 		
 		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
-		String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
+		String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "");
 		String dataNascimento = JOptionPane.showInputDialog("Data nascimento?");
 		String rg= JOptionPane.showInputDialog("Numero RG");
 		String cpf= JOptionPane.showInputDialog("Qual é o CPF?");
