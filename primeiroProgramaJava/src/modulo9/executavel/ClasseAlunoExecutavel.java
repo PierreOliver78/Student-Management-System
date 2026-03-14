@@ -1,8 +1,12 @@
 package modulo9.executavel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import modulo9.classes.Aluno;
+import modulo9.classes.Disciplina;
 
 public class ClasseAlunoExecutavel {
 	
@@ -30,17 +34,7 @@ public class ClasseAlunoExecutavel {
 		String escola= JOptionPane.showInputDialog("Nome da escola?");
 		String serie= JOptionPane.showInputDialog("Qual a série?");
 		
-		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1");		
-		String nota01= JOptionPane.showInputDialog("1ª Nota?");
-		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2");
-		String nota02= JOptionPane.showInputDialog("2ª Nota?");
-		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3");
-		String nota03= JOptionPane.showInputDialog("3ª Nota?");
-		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4");
-		String nota04= JOptionPane.showInputDialog("4ª Nota?");
-		
 				
-		
 		
 		Aluno aluno1 = new Aluno();//Aluno Bernardo
 		
@@ -55,7 +49,38 @@ public class ClasseAlunoExecutavel {
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatricula(serie);
 		
-			
+		
+		Disciplina disciplina1 = new Disciplina();
+		disciplina1.setDisciplina("Português");
+		disciplina1.setNota(90);
+		
+		aluno1.getDisciplinas().add(disciplina1);
+		
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Matemática");
+		disciplina2.setNota(95);
+		
+		aluno1.getDisciplinas().add(disciplina2);
+		
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("História");
+		disciplina3.setNota(70);
+		
+		aluno1.getDisciplinas().add(disciplina3);
+		
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Geografia");
+		disciplina4.setNota(84);
+		
+		aluno1.getDisciplinas().add(disciplina4);
+		
+		Disciplina disciplina5 = new Disciplina();
+		disciplina5.setDisciplina("Artes");
+		disciplina5.setNota(100);
+		
+		aluno1.getDisciplinas().add(disciplina5);
+		
+		
 		/*
 		System.out.println("Nome do aluno: " + aluno1.getNome());		
 		System.out.println("Idade do aluno: " + aluno1.getIdade());
@@ -71,6 +96,8 @@ public class ClasseAlunoExecutavel {
 		System.out.println(aluno1.toString());//Descrição do objeto na memoria
 		System.out.println("Média da nota final: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado " : "Reprovado ") + "Aluno " + aluno1.getNome());
+		
+		
 		
 		
 		//Equals e hashcode(Diferenciar e comparar objetos)
