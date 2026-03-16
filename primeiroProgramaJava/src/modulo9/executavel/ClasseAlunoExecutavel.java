@@ -49,7 +49,18 @@ public class ClasseAlunoExecutavel {
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatricula(serie);
 		
+		for (int pos = 1; pos <= 5; pos++) {
+			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos +"?");
+			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos +"?");
+			
+			Disciplina disciplina = new Disciplina();
+			disciplina.setDisciplina(nomeDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+			
+			aluno1.getDisciplinas().add(disciplina);
+		}
 		
+		/*
 		Disciplina disciplina1 = new Disciplina();
 		disciplina1.setDisciplina("Português");
 		disciplina1.setNota(90);
@@ -79,7 +90,7 @@ public class ClasseAlunoExecutavel {
 		disciplina5.setNota(100);
 		
 		aluno1.getDisciplinas().add(disciplina5);
-		
+		*/
 		
 		/*
 		System.out.println("Nome do aluno: " + aluno1.getNome());		
