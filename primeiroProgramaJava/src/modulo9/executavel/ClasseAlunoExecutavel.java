@@ -55,7 +55,7 @@ public class ClasseAlunoExecutavel {
 			
 			Disciplina disciplina = new Disciplina();
 			disciplina.setDisciplina(nomeDisciplina);
-			disciplina.setNota(Double.valueOf(notaDisciplina));
+			disciplina.setNota(Double.valueOf(notaDisciplina)-1);
 			
 			aluno1.getDisciplinas().add(disciplina);
 		}
@@ -103,6 +103,13 @@ public class ClasseAlunoExecutavel {
 		System.out.println("Resultado: " + aluno1.getAlunoAprovado2());
 		*/
 		
+		
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+		
+		if (escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3, 4 ou 5?");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-1);
+		}
 			
 		System.out.println(aluno1.toString());//Descrição do objeto na memoria
 		System.out.println("Média da nota final: " + aluno1.getMediaNota());
