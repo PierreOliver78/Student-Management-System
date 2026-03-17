@@ -24,7 +24,7 @@ public class ClasseAlunoExecutavel {
 		
 		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
-		String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
+	/*	String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
 		String dataNascimento = JOptionPane.showInputDialog("Data nascimento?");
 		String rg= JOptionPane.showInputDialog("Numero RG");
 		String cpf= JOptionPane.showInputDialog("Qual é o CPF?");
@@ -33,13 +33,13 @@ public class ClasseAlunoExecutavel {
 		String matricula= JOptionPane.showInputDialog("Data da matrícula?");
 		String escola= JOptionPane.showInputDialog("Nome da escola?");
 		String serie= JOptionPane.showInputDialog("Qual a série?");
-		
+	*/	
 				
 		
 		Aluno aluno1 = new Aluno();//Aluno Bernardo
 		
 		aluno1.setNome(nome);
-		aluno1.setIdade(Integer.valueOf(idade));
+	/*	aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(rg);
 		aluno1.setNumeroCpf(cpf);
@@ -48,14 +48,15 @@ public class ClasseAlunoExecutavel {
 		aluno1.setDataMatricula(matricula);
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatricula(serie);
-		
+	*/
+	
 		for (int pos = 1; pos <= 5; pos++) {
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos +"?");
 			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos +"?");
 			
 			Disciplina disciplina = new Disciplina();
 			disciplina.setDisciplina(nomeDisciplina);
-			disciplina.setNota(Double.valueOf(notaDisciplina)-1);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
 			
 			aluno1.getDisciplinas().add(disciplina);
 		}
