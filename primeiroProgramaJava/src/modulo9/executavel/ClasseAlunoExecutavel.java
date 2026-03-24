@@ -170,7 +170,7 @@ public class ClasseAlunoExecutavel {
 				System.out.println("Resultado: " + aluno.getAlunoAprovado2());
 				System.out.println();
 				System.out.println("=================================================");
-				System.out.println();
+				//System.out.println();
 			}
 			
 		}
@@ -182,6 +182,13 @@ public class ClasseAlunoExecutavel {
 			
 			for (Disciplina disciplina : aluno.getDisciplinas()) {
 				System.out.println(disciplina.getDisciplina());
+				System.out.println("=================================================");
+			}
+			
+			System.out.println("As notas por disciplinas são:");
+			for (Disciplina notaDisciplina : aluno.getDisciplinas()) {
+				System.out.println(notaDisciplina.getNota());
+				System.out.println("=================================================");
 			}
 			
 		}
