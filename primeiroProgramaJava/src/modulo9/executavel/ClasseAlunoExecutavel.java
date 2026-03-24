@@ -22,8 +22,12 @@ public class ClasseAlunoExecutavel {
 		/*aluno1 é uma referência para o objeto aluno*/
 		//Aluno aluno1 = null; Quando esquece de instanciar um dos motivos, mais podem ser vários. Aprendemos identificar.
 		
+		List<Aluno> alunos = new ArrayList<Aluno>();
 		
-		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		for (int qtd = 1; qtd <= 2; qtd++) {
+		
+		
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
 	/*	String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
 		String dataNascimento = JOptionPane.showInputDialog("Data nascimento?");
 		String rg= JOptionPane.showInputDialog("Numero RG");
@@ -50,7 +54,7 @@ public class ClasseAlunoExecutavel {
 		aluno1.setSerieMatricula(serie);
 	*/
 	
-		for (int pos = 1; pos <= 4; pos++) {
+		for (int pos = 1; pos <= 5; pos++) {
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos +"?");
 			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos +"?");
 			
@@ -113,7 +117,7 @@ public class ClasseAlunoExecutavel {
 			int posicao = 1;
 			
 			while (continuarRemover == 0) {
-				String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3, 4 ou 5?");
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3, 4?");
 				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
 				posicao ++;
 				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover");
@@ -121,9 +125,7 @@ public class ClasseAlunoExecutavel {
 			
 		}
 			
-		System.out.println(aluno1.toString());//Descrição do objeto na memoria
-		System.out.println("Média da nota final: " + aluno1.getMediaNota());
-		System.out.println("Resultado: " + aluno1.getAlunoAprovado2());
+		
 		//System.out.println("Resultado: " + (aluno1.getAlunoAprovado1() ? "Aprovado " : "Reprovado ") + "Aluno " + aluno1.getNome());
 		
 		
@@ -154,9 +156,22 @@ public class ClasseAlunoExecutavel {
 		System.out.println(aluno.toString());
 		*/
 		
-		System.out.println();
-		System.out.println("=================================================");
-		System.out.println();
+	alunos.add(aluno1);	
+	}
+		
+		for (Aluno aluno : alunos) {
+			
+			System.out.println(aluno.toString());//Descrição do objeto na memoria
+			System.out.println("Média da nota final: " + aluno.getMediaNota());
+			System.out.println("Resultado: " + aluno.getAlunoAprovado2());
+			System.out.println();
+			System.out.println("=================================================");
+			System.out.println();
+			
+			
+		}
+		
+		
 		/*=======================================================================*/
 		/*
 		aluno1.nome = "Bernardo";
@@ -193,12 +208,13 @@ public class ClasseAlunoExecutavel {
 				
 		/*=======================================================================*/
 		
+		/*
 		Aluno aluno3 = new Aluno();//Aluno Luana
 		
 		Aluno aluno4 = new Aluno("Jonas");
 		
 		Aluno aluno5 = new Aluno("Pedro", 45);
-		
+		*/
 	}
 
 }
