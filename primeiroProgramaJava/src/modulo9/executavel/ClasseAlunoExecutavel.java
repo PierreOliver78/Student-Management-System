@@ -50,7 +50,7 @@ public class ClasseAlunoExecutavel {
 		aluno1.setSerieMatricula(serie);
 	*/
 	
-		for (int pos = 1; pos <= 5; pos++) {
+		for (int pos = 1; pos <= 4; pos++) {
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos +"?");
 			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos +"?");
 			
@@ -107,9 +107,18 @@ public class ClasseAlunoExecutavel {
 		
 		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
 		
-		if (escolha == 0) {
-			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3, 4 ou 5?");
-			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-1);
+		if (escolha == 0) {/*Opção SIM e Zero */
+			
+			int continuarRemover = 0;
+			int posicao = 1;
+			
+			while (continuarRemover == 0) {
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3, 4 ou 5?");
+				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
+				posicao ++;
+				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover");
+			}
+			
 		}
 			
 		System.out.println(aluno1.toString());//Descrição do objeto na memoria
