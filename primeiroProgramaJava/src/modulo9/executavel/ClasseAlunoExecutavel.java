@@ -161,13 +161,15 @@ public class ClasseAlunoExecutavel {
 		
 		for (Aluno aluno : alunos) {
 			
-			System.out.println(aluno.toString());//Descrição do objeto na memoria
-			System.out.println("Média da nota final: " + aluno.getMediaNota());
-			System.out.println("Resultado: " + aluno.getAlunoAprovado2());
-			System.out.println();
-			System.out.println("=================================================");
-			System.out.println();
-			
+			if (aluno.getNome().equalsIgnoreCase("Pierre")) {
+				System.out.println(aluno.toString());//Descrição do objeto na memoria
+				System.out.println("Média da nota final: " + aluno.getMediaNota());
+				System.out.println("Resultado: " + aluno.getAlunoAprovado2());
+				System.out.println();
+				System.out.println("=================================================");
+				System.out.println();
+				break;
+			}
 			
 		}
 		
