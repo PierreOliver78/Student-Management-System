@@ -54,7 +54,7 @@ public class ClasseAlunoExecutavel {
 		aluno1.setSerieMatricula(serie);
 	*/
 	
-		for (int pos = 1; pos <= 5; pos++) {
+		for (int pos = 1; pos <= 3; pos++) {
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos +"?");
 			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos +"?");
 			
@@ -117,7 +117,7 @@ public class ClasseAlunoExecutavel {
 			int posicao = 1;
 			
 			while (continuarRemover == 0) {
-				String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3, 4?");
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3?");
 				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
 				posicao ++;
 				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover");
@@ -159,8 +159,26 @@ public class ClasseAlunoExecutavel {
 	alunos.add(aluno1);	
 	}
 		
-		for (Aluno aluno : alunos) {
+		//for (Aluno aluno : alunos) {
 			
+			for (int pos = 0; pos < alunos.size(); pos++) {
+				
+				Aluno aluno = alunos.get(pos);
+				
+				System.out.println("Aluno = " + aluno.getNome());
+				System.out.println("Média do aluno = " + aluno.getMediaNota());
+				System.out.println("Resultado =  " + aluno.getAlunoAprovado2());
+				System.out.println("-----------------------------------------");
+				
+				for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
+					
+					Disciplina disc = aluno.getDisciplinas().get(posd);
+					System.out.println("Materia = " + disc.getDisciplina() + " Nota = "+ disc.getNota());
+					
+				}
+				System.out.println("=====================================");
+			}
+			/*
 			if (aluno.getNome().equalsIgnoreCase("Pierre")) {
 				alunos.remove(aluno);
 				break;
@@ -190,7 +208,7 @@ public class ClasseAlunoExecutavel {
 				System.out.println(notaDisciplina.getNota());
 				System.out.println("=================================================");
 			}
-			
+			*/
 		}
 		
 		
@@ -237,6 +255,6 @@ public class ClasseAlunoExecutavel {
 		
 		Aluno aluno5 = new Aluno("Pedro", 45);
 		*/
-	}
+	//}
 
 }
