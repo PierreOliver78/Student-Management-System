@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 import modulo9.classes.Aluno;
 import modulo9.classes.Disciplina;
+import modulo9.constantes.StatusAluno;
 
 public class ClasseAlunoExecutavel {
 	
@@ -24,7 +25,11 @@ public class ClasseAlunoExecutavel {
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
-		for (int qtd = 1; qtd <= 2; qtd++) {
+		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
+		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
+		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
+		
+		for (int qtd = 1; qtd <= 5; qtd++) {
 		
 		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
@@ -159,8 +164,37 @@ public class ClasseAlunoExecutavel {
 	alunos.add(aluno1);	
 	}
 		
-		//for (Aluno aluno : alunos) {
+	for (Aluno aluno : alunos) {// Separei em listas
 			
+		if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)) {
+			alunosAprovados.add(aluno);
+		}else
+		if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
+			alunosRecuperacao.add(aluno);
+		}else if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.REPROVADO)) {
+			alunosReprovados.add(aluno);
+		}
+	
+	}
+		
+		System.out.println("***************LISTA DOS ALUNOS APROVADOS***************");
+		for (Aluno aluno : alunosAprovados) {
+			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
+		}
+		
+		System.out.println("***************LISTA DOS ALUNOS EM RECUPERAÇÃO***************");
+		for (Aluno aluno : alunosRecuperacao) {
+			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
+		}
+		
+		System.out.println("***************LISTA DOS ALUNOS REPROVADOS***************");
+		for (Aluno aluno : alunosReprovados) {
+			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
+		}
+		
+		
+		//for (Aluno aluno : alunos) {
+			/*
 			for (int pos = 0; pos < alunos.size(); pos++) {
 				
 				Aluno aluno = alunos.get(pos);
@@ -194,6 +228,7 @@ public class ClasseAlunoExecutavel {
 				}
 				System.out.println("=========================================");
 			}
+			*/
 			/*
 			if (aluno.getNome().equalsIgnoreCase("Pierre")) {
 				alunos.remove(aluno);
