@@ -1,6 +1,8 @@
 package modulo9.executavel;
 
+import java.io.ObjectInputFilter.Status;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -23,12 +25,16 @@ public class ClasseAlunoExecutavel {
 		/*aluno1 é uma referência para o objeto aluno*/
 		//Aluno aluno1 = null; Quando esquece de instanciar um dos motivos, mais podem ser vários. Aprendemos identificar.
 		
-		List<Aluno> alunos = new ArrayList<Aluno>();
+		/*É uma lista que dentro dela temos uma chave que identifiva uma sequencia de valores também*/
 		
+		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
+		
+		List<Aluno> alunos = new ArrayList<Aluno>();
+		/*
 		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
 		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
 		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
-		
+		*/
 		for (int qtd = 1; qtd <= 5; qtd++) {
 		
 		
@@ -164,31 +170,35 @@ public class ClasseAlunoExecutavel {
 	alunos.add(aluno1);	
 	}
 		
+		maps.put(StatusAluno.APROVADO, new ArrayList<Aluno>());
+		maps.put(StatusAluno.RECUPERACAO, new ArrayList<Aluno>());
+		maps.put(StatusAluno.REPROVADO, new ArrayList<Aluno>());
+		
 	for (Aluno aluno : alunos) {// Separei em listas
 			
 		if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)) {
-			alunosAprovados.add(aluno);
+			maps.get(StatusAluno.APROVADO).add(aluno);//alunosAprovados.add(aluno);
 		}else
 		if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
-			alunosRecuperacao.add(aluno);
+			maps.get(StatusAluno.RECUPERACAO).add(aluno);//alunosRecuperacao.add(aluno);
 		}else if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.REPROVADO)) {
-			alunosReprovados.add(aluno);
+			maps.get(StatusAluno.REPROVADO).add(aluno);//alunosReprovados.add(aluno);
 		}
 	
 	}
 		
 		System.out.println("***************LISTA DOS ALUNOS APROVADOS***************");
-		for (Aluno aluno : alunosAprovados) {
+		for (Aluno aluno : maps.get(StatusAluno.APROVADO)){//alunosAprovados) {
 			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
 		}
 		
 		System.out.println("***************LISTA DOS ALUNOS EM RECUPERAÇÃO***************");
-		for (Aluno aluno : alunosRecuperacao) {
+		for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)){
 			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
 		}
 		
 		System.out.println("***************LISTA DOS ALUNOS REPROVADOS***************");
-		for (Aluno aluno : alunosReprovados) {
+		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
 			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
 		}
 		
