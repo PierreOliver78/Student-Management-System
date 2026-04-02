@@ -5,20 +5,13 @@ import java.util.List;
 
 import modulo9.constantes.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 	
 	/*Esses são os atributos do Aluno*/
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
+	
 	private String dataMatricula;
 	private String nomeEscola;
-	private String serieMatricula;
-	
+	private String serieMatricula;	
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
 	public void setDisciplinas(List<Disciplina> disciplinas) {
