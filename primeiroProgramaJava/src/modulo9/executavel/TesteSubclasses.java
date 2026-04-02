@@ -46,8 +46,18 @@ public class TesteSubclasses {
 		System.out.println("Total de benefícios da secretária: " + secretario.qtdBeneficio());
 		System.out.println();
 		System.out.println("Total de benefícios do diretor: " + diretor.qtdBeneficio());
+		System.out.println();
 		
+		teste(aluno);
+		teste(diretor);
+		teste(secretario);
+				
 		
+	}
+	
+	public static void teste (Pessoa pessoa) {
+		System.out.println("Essa pessoa é demais, nome dele " + pessoa.getNome() + ". O seu salário é de: "
+				+ pessoa.salario());
 	}
 
 }
