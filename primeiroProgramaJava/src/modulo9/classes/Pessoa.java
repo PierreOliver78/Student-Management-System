@@ -56,5 +56,10 @@ public class Pessoa {
 	}
 	
 	
+	public boolean pessoaMaiorIdade() {
+		return idade >= 18;
+		
+				
+	}
 
 }
