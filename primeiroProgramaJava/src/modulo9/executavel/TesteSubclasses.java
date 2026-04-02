@@ -2,6 +2,7 @@ package modulo9.executavel;
 
 import modulo9.classes.Aluno;
 import modulo9.classes.Diretor;
+import modulo9.classes.Pessoa;
 import modulo9.classes.Secretario;
 
 public class TesteSubclasses {
@@ -31,6 +32,8 @@ public class TesteSubclasses {
 		System.out.println();
 		System.out.println("Nome aluno: " + aluno.getNome() + " | Aluno é maior de idade? " + " | Idade: " + aluno.getIdade());
 		System.out.println(aluno.pessoaMaiorIdade() + " | " + aluno.msgMaiorIdade());
+		
+				
 	}
 
 }

@@ -1,7 +1,7 @@
 package modulo9.classes;
 
 //Essa é a Super Classe(pai / master) - Atributos comuns a todos os objetos filho ou subclasses
-public class Pessoa {
+public abstract class Pessoa {
 	
 	protected String nome;
 	protected int idade;
