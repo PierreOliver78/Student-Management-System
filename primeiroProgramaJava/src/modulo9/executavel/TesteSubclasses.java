@@ -32,8 +32,22 @@ public class TesteSubclasses {
 		System.out.println();
 		System.out.println("Nome aluno: " + aluno.getNome() + " | Aluno é maior de idade? " + " | Idade: " + aluno.getIdade());
 		System.out.println(aluno.pessoaMaiorIdade() + " | " + aluno.msgMaiorIdade());
+		System.out.println();
 		
-				
+		System.out.println("Salário aluno: R$" + aluno.salario());
+		System.out.println();
+		System.out.println("Salário secretário: R$" + secretario.salario());
+		System.out.println();
+		System.out.println("Salário diretor: R$" + diretor.salario());
+		System.out.println("**********************************");
+		
+		System.out.println("Total de benefícios do aluno: " + aluno.qtdBeneficio());
+		System.out.println();
+		System.out.println("Total de benefícios da secretária: " + secretario.qtdBeneficio());
+		System.out.println();
+		System.out.println("Total de benefícios do diretor: " + diretor.qtdBeneficio());
+		
+		
 	}
 
 }
