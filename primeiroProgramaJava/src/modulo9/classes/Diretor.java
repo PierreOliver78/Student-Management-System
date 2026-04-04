@@ -1,10 +1,25 @@
 package modulo9.classes;
 
-public class Diretor extends Pessoa {
+import cursojava.interfaces.PermitirAcesso;
+
+public class Diretor extends Pessoa implements PermitirAcesso {
 	
 	private String RegistroEducacao;
 	private int tempoDirecao;
 	private String titulacao;
+	
+	private String login;
+	private String senha;
+	
+	public Diretor(String login, String senha) {
+		this.login = login;
+		this.senha = senha;		
+		
+	}
+	
+	public Diretor() {
+		
+	}
 	
 	
 	public String getRegistroEducacao() {
@@ -43,6 +58,18 @@ public class Diretor extends Pessoa {
 	public int qtdBeneficio() {
 		// TODO Auto-generated method stub
 		return 9;
+	}
+	
+	@Override
+	public boolean autenticar(String login, String senha) {
+		this.login = login;
+		this.senha = senha;
+		return autenticar();
+	}
+	@Override
+	public boolean autenticar() {
+		
+		return login.equals("@pierre") && senha.equals("dir123");
 	}
 	
 
