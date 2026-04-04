@@ -1,10 +1,15 @@
 package modulo9.classes;
 
-public class Secretario extends Pessoa {
+import cursojava.interfaces.PermitirAcesso;
+
+public class Secretario extends Pessoa implements PermitirAcesso {
 	
 	private String registro;
 	private String nivelCargo;
 	private String experiencia;
+	
+	private String login;
+	private String senha;
 	
 	
 	public String getRegistro() {
@@ -27,6 +32,7 @@ public class Secretario extends Pessoa {
 	}
 	
 	
+	
 	@Override
 	public String toString() {
 		return "Secretario [registro=" + registro + ", nivelCargo=" + nivelCargo + ", experiencia=" + experiencia
@@ -43,6 +49,30 @@ public class Secretario extends Pessoa {
 		// TODO Auto-generated method stub
 		return 6;
 	}
+	
+	//Esse é o metodo do contrato de autenticação
+	@Override
+	public boolean autenticar() {
+		
+		return login.equals("admin") && senha.equals("admin");//Retorna sim cado login e senha seja admin, senão false.
+		
+	}
+	
+	
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	
+	
 	
 	
 	

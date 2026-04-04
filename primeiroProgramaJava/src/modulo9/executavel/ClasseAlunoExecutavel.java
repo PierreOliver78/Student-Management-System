@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 
 import modulo9.classes.Aluno;
 import modulo9.classes.Disciplina;
+import modulo9.classes.Secretario;
 import modulo9.constantes.StatusAluno;
 
 public class ClasseAlunoExecutavel {
@@ -18,7 +19,13 @@ public class ClasseAlunoExecutavel {
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
-		if(login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+		Secretario secretario = new Secretario();//Diretamente com o objeto
+		secretario.setLogin(login);
+		secretario.setSenha(senha);
+		
+		if(secretario.autenticar()) {//Se true acessa se False não acessa
+			
+			JOptionPane.showMessageDialog(null, "Acesso Liberado");
 			
 		
 		
@@ -196,18 +203,27 @@ public class ClasseAlunoExecutavel {
 		
 		System.out.println("***************LISTA DOS ALUNOS APROVADOS***************");
 		for (Aluno aluno : maps.get(StatusAluno.APROVADO)){//alunosAprovados) {
-			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
+			System.out.println("Aluno: " + aluno.getNome() + " | Resultado= " + aluno.getAlunoAprovado2() + 
+					" com média= " + aluno.getMediaNota());
+			
 		}
+		System.out.println();
 		
 		System.out.println("***************LISTA DOS ALUNOS EM RECUPERAÇÃO***************");
 		for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)){
-			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
+			System.out.println("Aluno: " + aluno.getNome() + " | Resultado= " + aluno.getAlunoAprovado2() + 
+					" com média= " + aluno.getMediaNota());
+			
 		}
+		System.out.println();
 		
 		System.out.println("***************LISTA DOS ALUNOS REPROVADOS***************");
 		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
-			System.out.println("Aluno: " + aluno.getNome() + " - Resultado= " + aluno.getAlunoAprovado2() + " com média= " + aluno.getMediaNota());
+			System.out.println("Aluno: " + aluno.getNome() + " | Resultado= " + aluno.getAlunoAprovado2() + 
+					" com média= " + aluno.getMediaNota());
+			
 		}
+		System.out.println();
 		
 		
 		//for (Aluno aluno : alunos) {
@@ -277,6 +293,8 @@ public class ClasseAlunoExecutavel {
 				System.out.println("=================================================");
 			}
 			*/
+		}else{
+			JOptionPane.showMessageDialog(null, "Acesso Negado");
 		}
 		
 	}
