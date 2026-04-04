@@ -20,6 +20,8 @@ public class ClasseAlunoExecutavel {
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
+		PermitirAcesso permitirAcesso = new Secretario(login, senha);
+		
 		//Secretario secretario = new Secretario();//Diretamente com o objeto
 		//PermitirAcesso secretario = new Secretario();
 		
@@ -30,7 +32,7 @@ public class ClasseAlunoExecutavel {
 		
 		//if(secretario.autenticar()) {//Se true acessa se False não acessa
 			
-		if(new Secretario().autenticar(login, senha)) {
+		if(permitirAcesso.autenticar()) {
 			
 			JOptionPane.showMessageDialog(null, "Acesso Liberado");
 			
@@ -56,7 +58,7 @@ public class ClasseAlunoExecutavel {
 		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
 		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 		*/
-		for (int qtd = 1; qtd <= 5; qtd++) {
+		for (int qtd = 1; qtd <= 1; qtd++) {
 		
 		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
@@ -210,7 +212,7 @@ public class ClasseAlunoExecutavel {
 		
 		System.out.println("***************LISTA DOS ALUNOS APROVADOS***************");
 		for (Aluno aluno : maps.get(StatusAluno.APROVADO)){//alunosAprovados) {
-			System.out.println("Aluno: " + aluno.getNome() + " | Resultado= " + aluno.getAlunoAprovado2() + 
+			System.out.println("Aluno: " + aluno.getNome() + " | Resultado: " + aluno.getAlunoAprovado2() + 
 					" com média= " + aluno.getMediaNota());
 			
 		}
