@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import cursojava.interfaces.PermitirAcesso;
 import modulo9.classes.Aluno;
 import modulo9.classes.Disciplina;
 import modulo9.classes.Secretario;
@@ -19,11 +20,17 @@ public class ClasseAlunoExecutavel {
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
-		Secretario secretario = new Secretario();//Diretamente com o objeto
+		//Secretario secretario = new Secretario();//Diretamente com o objeto
+		//PermitirAcesso secretario = new Secretario();
+		
+		/*
 		secretario.setLogin(login);
 		secretario.setSenha(senha);
+		*/
 		
-		if(secretario.autenticar()) {//Se true acessa se False não acessa
+		//if(secretario.autenticar()) {//Se true acessa se False não acessa
+			
+		if(new Secretario().autenticar(login, senha)) {
 			
 			JOptionPane.showMessageDialog(null, "Acesso Liberado");
 			
