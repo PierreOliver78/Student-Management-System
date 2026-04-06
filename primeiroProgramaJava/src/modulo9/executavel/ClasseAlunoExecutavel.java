@@ -23,7 +23,7 @@ public class ClasseAlunoExecutavel {
 		
 		try {
 			
-			File file = new File("E:\\Pierre\\CURSOS\\PROGRAMAÇÃO\\arquivoPierre.txt");
+			File file = new File("E:\\Pierre\\CURSOS\\PROGRAMAÇ\\arquivoPierre.txt");
 			Scanner scanner = new Scanner(file);
 			
 		
@@ -345,6 +345,9 @@ public class ClasseAlunoExecutavel {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
 			System.out.println("Memsagem: " + e.getMessage());
+		}finally {/*Sempre é executado ocorrendo erros ou não
+		   FInally sempre é usado quando precisa executar um processo acontecendo erro ou nãp no sistema*/
+			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java com Jdev!");
 		}
 		
 	}
