@@ -1,6 +1,7 @@
 package modulo9.executavel;
 
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +21,9 @@ public class ClasseAlunoExecutavel {
 	public static void main(String[] args) {
 		
 		try {
+			
+			
+			
 		
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
@@ -67,7 +71,8 @@ public class ClasseAlunoExecutavel {
 		
 		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
-	/*	String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
+		String idade = JOptionPane.showInputDialog("Qual a idade do " + nome + "?");
+	/*	
 		String dataNascimento = JOptionPane.showInputDialog("Data nascimento?");
 		String rg= JOptionPane.showInputDialog("Numero RG");
 		String cpf= JOptionPane.showInputDialog("Qual é o CPF?");
@@ -82,7 +87,8 @@ public class ClasseAlunoExecutavel {
 		Aluno aluno1 = new Aluno();//Aluno Bernardo
 		
 		aluno1.setNome(nome);
-	/*	aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setIdade(Integer.valueOf(idade));
+	/*	
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(rg);
 		aluno1.setNumeroCpf(cpf);
@@ -313,7 +319,7 @@ public class ClasseAlunoExecutavel {
 		
 		//AQUI O ERRO
 		
-		}catch (Exception e) {
+		}catch (NumberFormatException e) {
 			
 			StringBuilder saida = new StringBuilder();
 			
@@ -330,7 +336,12 @@ public class ClasseAlunoExecutavel {
 				saida.append("\n Linha de erro: " + e.getStackTrace()[i].getLineNumber());
 			}
 			
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
+			JOptionPane.showMessageDialog(null, "Erro de conversão de numero " + saida.toString());
+		}catch (NullPointerException e) {
+			JOptionPane.showMessageDialog(null, "Opaa um null pointer exception: " + e.getClass());
+		}catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Memsagem: " + e.getMessage());
 		}
 		
 	}
