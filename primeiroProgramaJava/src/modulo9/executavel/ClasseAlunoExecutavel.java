@@ -19,6 +19,8 @@ public class ClasseAlunoExecutavel {
 	
 	public static void main(String[] args) {
 		
+		try {
+		
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
@@ -39,7 +41,7 @@ public class ClasseAlunoExecutavel {
 			
 			JOptionPane.showMessageDialog(null, "Acesso Liberado");
 			
-		
+			List<Aluno> alunos = new ArrayList<Aluno>();
 		
 		/*Objeto ainda não existe na memória
 		Aluno aluno1;
@@ -55,7 +57,7 @@ public class ClasseAlunoExecutavel {
 		
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 		
-		List<Aluno> alunos = new ArrayList<Aluno>();
+		
 		/*
 		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
 		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
@@ -307,6 +309,13 @@ public class ClasseAlunoExecutavel {
 			*/
 		}else{
 			JOptionPane.showMessageDialog(null, "Acesso Negado");
+		}
+		
+		//AQUI O ERRO
+		
+		}catch (Exception e) {
+			e.printStackTrace();//Imprime erro no console Java
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas");
 		}
 		
 	}
