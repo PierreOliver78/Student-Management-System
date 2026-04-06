@@ -1,10 +1,11 @@
 package modulo9.executavel;
 
 
-
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -22,7 +23,8 @@ public class ClasseAlunoExecutavel {
 		
 		try {
 			
-			
+			File file = new File("E:\\Pierre\\CURSOS\\PROGRAMAÇÃO\\arquivoPierre.txt");
+			Scanner scanner = new Scanner(file);
 			
 		
 		String login = JOptionPane.showInputDialog("Informe o login");
@@ -339,8 +341,9 @@ public class ClasseAlunoExecutavel {
 			JOptionPane.showMessageDialog(null, "Erro de conversão de numero " + saida.toString());
 		}catch (NullPointerException e) {
 			JOptionPane.showMessageDialog(null, "Opaa um null pointer exception: " + e.getClass());
-		}catch (Exception e) {
+		}catch (Exception e) {//Captura todas as exceções que não prevemos
 			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
 			System.out.println("Memsagem: " + e.getMessage());
 		}
 		
