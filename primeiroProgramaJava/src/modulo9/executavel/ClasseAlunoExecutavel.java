@@ -314,8 +314,23 @@ public class ClasseAlunoExecutavel {
 		//AQUI O ERRO
 		
 		}catch (Exception e) {
+			
+			StringBuilder saida = new StringBuilder();
+			
 			e.printStackTrace();//Imprime erro no console Java
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas");
+			
+			System.out.println("Memasagem: " + e.getMessage());//Mensagem do erro ou causa
+			
+			e.getStackTrace();
+			
+			for(int i = 0; i < e.getStackTrace().length; i++) {
+				
+				saida.append("\n Classe de erro: " + e.getStackTrace()[i].getClassName());
+				saida.append("\n Método de erro: " + e.getStackTrace()[i].getMethodName());
+				saida.append("\n Linha de erro: " + e.getStackTrace()[i].getLineNumber());
+			}
+			
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
 		}
 		
 	}
