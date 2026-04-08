@@ -324,7 +324,7 @@ public class ClasseAlunoExecutavel {
 
 	public static void lerArquivo() throws FileNotFoundException {
 
-		File file = new File("E:\\Pierre\\CURSOS\\PROGRAMAÇ\\arquivoPierre.txt");
+		File file = new File("E:\\Pierre\\CURSOS\\PROGRAMAÇÃO\\arquivoPierre.txt");
 		Scanner scanner = new Scanner(file);
 
 	}
