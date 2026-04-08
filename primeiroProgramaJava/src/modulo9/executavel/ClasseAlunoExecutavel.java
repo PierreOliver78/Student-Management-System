@@ -2,6 +2,7 @@ package modulo9.executavel;
 
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 import cursojava.interfaces.PermitirAcesso;
+import modulo10.classe.excecao.ExcecaoProcessarNota;
 import modulo10.classesauxiliares.FuncaoAutenticacao;
 import modulo9.classes.Aluno;
 import modulo9.classes.Diretor;
@@ -21,12 +23,12 @@ public class ClasseAlunoExecutavel {
 	
 	public static void main(String[] args) {
 		
+		
 		try {
 			
-			File file = new File("E:\\Pierre\\CURSOS\\PROGRAMAÇ\\arquivoPierre.txt");
-			Scanner scanner = new Scanner(file);
+			lerArquivo();
 			
-		
+					
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
@@ -341,13 +343,23 @@ public class ClasseAlunoExecutavel {
 			JOptionPane.showMessageDialog(null, "Erro de conversão de numero " + saida.toString());
 		}catch (NullPointerException e) {
 			JOptionPane.showMessageDialog(null, "Opaa um null pointer exception: " + e.getClass());
-		}catch (Exception e) {//Captura todas as exceções que não prevemos
+		}catch (ExcecaoProcessarNota e) {//Captura todas as exceções que não prevemos
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
-			System.out.println("Memsagem: " + e.getMessage());
+			JOptionPane.showMessageDialog(null, "Erro da exceção customizada: " + e.getClass().getName());
+			//System.out.println("Memsagem: " + e.getMessage());
 		}finally {/*Sempre é executado ocorrendo erros ou não
 		   FInally sempre é usado quando precisa executar um processo acontecendo erro ou nãp no sistema*/
 			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java com Jdev!");
+		}
+		
+	}
+	
+	public static void lerArquivo () throws ExcecaoProcessarNota {
+		try {
+		File file = new File("E:\\Pierre\\CURSOS\\PROGRAMAÇ\\arquivoPierre.txt");
+		Scanner scanner = new Scanner(file);
+		}catch (FileNotFoundException e) {
+			throw new ExcecaoProcessarNota(e.getMessage());
 		}
 		
 	}
